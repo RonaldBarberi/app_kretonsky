@@ -1,0 +1,100 @@
+{
+  "Cargue de Bases": {
+      "Cargues Claro": [
+          {
+              "Descarga Asignacion DIME": "_etl_asignacion_tmk.py"
+          }
+      ],
+      "Cargues Manuales": [
+          {
+              "Cargar Blacklist": "_etl_upload_blacklist.py"
+          },
+          {
+              "Cargar Pospago": "_etl_upload_prepago_pospago_arepas.py"
+          },
+          {
+              "Cargar Devoluciones Claro": "_etl_bd_devoluciones.py"
+          },
+          {
+              "Cargar Kronos": "_etl_kronos_sms.py"
+          },
+          {
+              "Cargar Ventas": "_etl_update_ventas_tmk.py"
+          }
+      ],
+      "Procesamiento de Bases": [
+          {
+              "Distribucion Telefonos DIME": "_etl_distribution_assignment.py"
+          }
+      ]
+  },
+  "Exportes de Base": {
+    "Exportes Asignacion Diaria": [
+          {
+              "Asignacion Hogar": "_py_export_assigment_hogar.py"
+          },
+          {
+              "Asignacion Migracion": "_py_export_assigment_migracion.py"
+          },
+          {
+              "Asignacion Portabilidad": "_py_export_assigment_portabilidad.py"
+          }
+      ],
+    "Otros Exportes": [
+          {
+              "Gestion DIME": "_etl_export_gestion_dime.py"
+          }
+      ]
+  },
+  "Bots": {
+      "Cargues": [
+        {
+            "Cargue Predictivo": "_py_up_vcd_predicitvo.py"
+        },
+        {
+            "Cargue Blaster": "_py_up_vcd_blaster.py"
+        }
+      ],
+      "Envios": [
+        {
+            "Enviar PDC (Completo)": "_main_pdc_seend.py"
+        },
+        {
+            "Enviar PDC (Crudo)": "_py_seend_wpp_pdc.py"
+        },
+        {
+            "Bot GTR": "_py_gtr_realtime.py"
+        },
+        {
+            "Correo Caidos (Diario)": "_py_seend_bd_inb_yesterday.py"
+        },
+        {
+            "Correo Caidos (Hora Hora)": "_py_seend_bd_inb_hour_by_hour.py"
+        },
+        {
+            "Correo Informes": "_py_seend_mail.py"
+        }
+      ]
+  },
+  "Otro": {
+      "Ejecutar Sps": [
+        {
+            "Ejecutar Sps Hora Hora": "_ev_executer_sps_hour_by_hour.py"
+        },
+        {
+            "Ejecutar Sps Diario": "_ev_executer_sps_diary.py"
+        },
+        {
+            "Actualizacion reporteria OP": "_py_update_files_operacion.py"
+        },
+        {
+            "Validador Update Tables": "_py_validator_updates.py"
+        }
+      ],
+      "Depures": [
+        {
+            "Depuracion Fast": "_py_depuration_fast.py"
+        }
+      ]
+  }
+}
